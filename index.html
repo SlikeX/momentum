@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="css/owfont-regular.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>momentum</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="player">
+        <div class="player-controls">
+          <button class="play-prev player-icon"></button>
+          <button class="play player-icon"></button>
+          <button class="play-next player-icon"></button>
+          <input
+            type="range"
+            class="player-volume"
+            name="volume"
+            id="volume-bar"
+            step="0.01"
+          />
+          <button class="unmute player-icon"></button>
+        </div>
+        <div class="song-name"></div>
+        <div class="range-container">
+          <div class="current-time">0:00</div>
+          <input
+            type="range"
+            class="player-progress"
+            name="progress"
+            id="progress-bar"
+          />
+          <div class="duration-time">0:00</div>
+        </div>
+        <audio src="./assets/sounds/Aqua Caelestis.mp3"></audio>
+        <ul class="play-list"></ul>
+      </div>
+      <div class="weather">
+        <input type="text" class="city" value="Minsk" />
+        <i class="weather-icon owf"></i>
+        <div class="weather-error"></div>
+        <div class="description-container">
+          <span class="temperature"></span>
+          <span class="weather-description"></span>
+        </div>
+        <div class="wind"></div>
+        <div class="humidity"></div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="slider-icons">
+        <button class="slide-prev slider-icon"></button>
+        <button class="slide-next slider-icon"></button>
+      </div>
+      <time class="time"></time>
+      <date class="date"></date>
+      <div class="greeting-container">
+        <span class="greeting"></span>
+        <input type="text" class="name" placeholder="Enter your name" />
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="language-container">
+        <span class="ru-language">Рус</span>
+        <div class="checkbox-container">
+          <input
+            type="checkbox"
+            class="language-switcher"
+            id="language-switcher"
+            checked
+          />
+          <label for="language-switcher" class="language-label"></label>
+        </div>
+        <span class="en-language">Eng</span>
+      </div>
+      <button class="change-quote"></button>
+      <div>
+        <div class="quote"></div>
+        <div class="author"></div>
+      </div>
+    </footer>
+    <script src="assets/scripts/language.js"></script>
+    <script src="assets/scripts/greeting.js"></script>
+    <script type="module" src="assets/scripts/audio.js"></script>
+    <script src="assets/scripts/weather.js"></script>
+    <script src="assets/scripts/slider.js"></script>
+    <script src="assets/scripts/quotes.js"></script>
+    <script src="assets/scripts/time_date.js"></script>
+  </body>
+</html>
