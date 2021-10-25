@@ -25,9 +25,12 @@ function showGreeting(){
     let lang = getLanguage();
     const timeOfDay = getTimeOfDay();
     if(lang =='en'){
+    name.placeholder = 'Enter your name'
     greetingSpot.textContent = `Good ${timeOfDay}`
     }else{
+    name.placeholder = 'Введите имя'
     greetingSpot.textContent =timeOfDay;
+    
     }
 }
 

@@ -11,10 +11,15 @@ function showTime(){
 }
 
 function showDate(){
+    let lang = getLanguage()
     const date = new Date;
-    const options = {weekday:'long', month: 'long', day: 'numeric'}
-    const currentDate = date.toLocaleDateString('en-En',options);
-    dateSpot.textContent = currentDate;
+    const options = {weekday:'long', month: 'long', day: 'numeric'};
+    if(lang=='en'){
+        dateSpot.textContent = date.toLocaleDateString('en-En',options);
+    }
+    else{
+        dateSpot.textContent = date.toLocaleDateString('ru-Ru',options);
+    }
 }
 
 showTime();

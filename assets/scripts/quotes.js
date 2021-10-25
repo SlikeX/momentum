@@ -8,12 +8,21 @@ function getRandomNum(min = 0,max = 59){
 
 async function getQuotes(){
     let num = getRandomNum();
-    const qutes = 'assets/quotes/data_en.json';
-    const res = await fetch(qutes);
+    let lang = getLanguage();
+    if(lang == 'en'){
+    let quotes = 'assets/quotes/data_en.json';const res = await fetch(quotes);
     const data = await res.json();
     quotesSpot.textContent = data[num].text;
     authorsSpot.textContent = data[num].author;
+    }else{
+    let quotes = 'assets/quotes/data.json';
+    const res = await fetch(quotes);
+    const data = await res.json();
+    quotesSpot.textContent = data[num].text;
+    authorsSpot.textContent = data[num].author;
+    }
 }
 
 changeQuote.addEventListener('click',getQuotes);
+checkbox.addEventListener('click',getQuotes);
 getQuotes();
