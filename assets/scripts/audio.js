@@ -147,6 +147,7 @@ let a = event.target;
 if(a.tagName == 'LI' || a.tagName == 'BUTTON'){
     playNum = a.id;
     if(!a.classList.contains('pause')){
+        isPlay = true;
         audio.src = playList[playNum].src;
         audio.currentTime = 0;
         audio.play();
@@ -161,6 +162,7 @@ if(a.tagName == 'LI' || a.tagName == 'BUTTON'){
         playBtn.classList.add('pause');
         songName.textContent = playList[playNum].title;
     }else{
+        isPlay = false;
         itemButtons.forEach(elem=>{
             elem.classList.remove('pause');
         })
