@@ -63,5 +63,6 @@ function getLocalStorage(){
 window.addEventListener('load',getLocalStorage);
 checkbox.addEventListener('change',defCity);
 checkbox.addEventListener('change',getWeather);
+city.addEventListener('change',getWeather)
 getWeather()
 
